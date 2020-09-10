@@ -14,7 +14,16 @@ class Stats():
 
     def save(self):
         time1 = self.ui.time1.text()
-        print(time1)
+        if time1 =="":
+            QMessageBox.about(self.ui,"提示","请输入触发时间")
+        key1 = self.ui.key1.text()
+        if key1 =="":
+            QMessageBox.about(self.ui,"提示","请输入触发时间")
+        time2 = self.ui.time2.text()
+        key2 = self.ui.key2.text()
+        ipAddr = self.ui.ipAddr.text()
+        port = self.ui.ipAddr.text()
+        print(type(time1),key1,time2,key2,ipAddr,port)
 
 
 app = QApplication([])
